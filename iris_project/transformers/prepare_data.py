@@ -10,7 +10,7 @@ if 'test' not in globals():
 def transform(df: pd.DataFrame, *args, **kwargs) -> pd.DataFrame:
     df = df.copy()
     train_df, test_df = train_test_split(
-        df, test_size=0.3, random_state=42, stratify=df["target"]
+        df, test_size=0.2, random_state=42, stratify=df["target"]
     )
     train_df["split"] = "train"
     test_df["split"] = "test"
